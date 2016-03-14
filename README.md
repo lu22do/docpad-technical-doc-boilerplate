@@ -2,13 +2,20 @@
 
 ## Getting Started
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+1. [Install DocPad](https://github.com/bevry/docpad) 
 
-1. Clone the project and run the server
+    ``` bash
+    mkdir my-website
+    cd my-website
+    docpad run
+    ```
+
+1. Clone the project, resolve dependencies and run the server
 
 	``` bash
-	mkdir my-website
+	clone https://github.com/lu22do/docpad-technical-doc-boilerplate.git my-website
 	cd my-website
+    npm i
 	docpad run
 	```
 

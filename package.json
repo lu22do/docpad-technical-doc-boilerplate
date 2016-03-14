@@ -1,5 +1,5 @@
 {
-  "name": "Boilerplate for technical doc site",
+  "name": "docpad-technical-doc-boilerplate",
   "version": "0.0.1",
   "dependencies": {
     "docpad": "",
