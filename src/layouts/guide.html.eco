@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="row">
+
+    <div class="col-md-2">
+        <nav class="col-md-2 hidden-print affix" id="sidebar"> 
+            <ul class="nav nav-sidebar">
+                <% for document in @getCollection('guides').toJSON(): %>
+                    <li
+                        about="<%= document.url %>"
+                        class="<%= 'active' if @document.url is document.url %>"
+                    >
+                        <a href="<%= document.url %>" property="dc:title">
+                            <%= document.title %>
+                        </a>
+                    </li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="col-md-8">
+        <div id="guide-content" data-spy="scroll" data-target="#spyscroll">
+            <%- @content %>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <nav class="hidden-print hidden-xs hidden-sm affix" id="spyscroll"> 
+            <b class="toc-item">Contents</b>
+            <%- @getToc() %> 
+        </nav>
+    </div>
+
+</div>

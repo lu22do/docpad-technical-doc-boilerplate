@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title><%= @getPreparedTitle() %></title>
+
+	<!-- Output DocPad produced meta elements -->
+	<%- @getBlock('meta').toHTML() %>
+
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="images/icons/favicon.ico">
+
+	<!-- Styles -->
+	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+</head>
+
+<body>
+	<!-- Topbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Doc portal PoC</a>
+			</div>
+			
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<% for document in @getCollection('pages').toJSON(): %>
+						<li
+							typeof="sioc:Page"
+							about="<%= document.url %>"
+							class="<%= 'active'	if @document.url is document.url %>"
+						>
+							<a href="<%= document.url %>" property="dc:title">
+								<%= document.title %>
+							</a>
+						</li>
+					<% end %>
+				</ul>
+			</div><!--/.navbar-collapse -->
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div class="container">
+		<!-- Content -->
+		<section id="content" class="content">
+			<%- @content %>
+		</section>
+
+		<!-- Footer -->
+		<!--footer>
+			<hr>
+			<p class="pull-left">&copy; Nagra <%- (new Date()).getFullYear() %></p>
+			<p class="pull-right">
+				This website was last updated at <%= @site.date.toISOString() %>
+			</p>
+		</footer-->
+	</div><!-- /container -->
+
+	<!-- Scripts -->
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+</body>
+</html>
