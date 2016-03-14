@@ -1,20 +1,15 @@
 {
-  "name": "twitter-bootstrap.docpad",
-  "version": "0.10.0",
-  "description": "Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
+  "name": "Boilerplate for technical doc site",
+  "version": "0.0.1",
   "dependencies": {
     "docpad": "",
     "docpad-plugin-coffeescript": "",
     "docpad-plugin-eco": "",
     "docpad-plugin-marked": "",
     "docpad-plugin-stylus": "",
-    "markdown-toc": "^0.12.3"
+    "markdown-toc": ""
   },
   "devDependencies": {
     "docpad-plugin-livereload": ""
-  },
-  "main": "node_modules/docpad/bin/docpad-server",
-  "scripts": {
-    "start": "node_modules/docpad/bin/docpad-server"
   }
 }

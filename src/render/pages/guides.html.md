@@ -5,9 +5,9 @@ tags: ['toplevel']
 pageOrder: 1
 ---
 
-# OpenTV 5 Application Developer Guides
+# Application Developer Guides
 
-Application development on OpenTV 5 is super easy. 
+Application development on this platform is super easy. 
 
 ## Where to start?
 
