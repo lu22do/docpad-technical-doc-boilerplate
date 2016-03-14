@@ -4,10 +4,8 @@
 
 1. [Install DocPad](https://github.com/bevry/docpad) 
 
-    ``` bash
-    mkdir my-website
-    cd my-website
-    docpad run
+    ``` 
+    npm i -g docpad
     ```
 
 1. Clone the project, resolve dependencies and run the server
