@@ -21,6 +21,18 @@
 
 1. Start hacking away by modifying the `src` directory
 
+## Complexities
+
+* Finding a toc generator that exports in JSON (to create the scrollspy toc) and behaves the same as the markdown parser in term of slug generation and HTML tag handling.
+* Support dynamic expansion of toc with a somewhat ugly workaround by loading the full toc hidden and then showing it with sub-headers hidden.
+
+## Todo
+
+* Fix scroll bar position
+* Fix spy scroll position
+* Demonstrate split in fragments
+* Support scroll of spyscroll (if too big)
+
 ## License
 
 MIT

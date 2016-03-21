@@ -1,6 +1,7 @@
-toc = require('markdown-toc');
+toc = require('markdown-toc')
 
-genToc = (res, items, index, lvl) ->
+
+genToc = (res, items, index, lvl, maxlvl) ->
 	res += "<ul class='nav'>"
 	while index < items.length
 		if items[index].lvl is lvl
@@ -8,13 +9,14 @@ genToc = (res, items, index, lvl) ->
 			res += "<a class='toc-item toc-item-" + lvl + "' href='#" + items[index].slug + "'>"
 			res += items[index].content
 			res += "</a>"
-			res += "</li>"
 		
-		if index+1 < items.length 
-			if items[index+1].lvl is lvl+1 
-				obj = genToc(res, items, index+1, lvl+1)
-				index = obj.index
-				res = obj.res
+			if index+1 < items.length 
+				if items[index+1].lvl is lvl+1 and  items[index+1].lvl <= maxlvl
+					obj = genToc(res, items, index+1, lvl+1)
+					index = obj.index
+					res = obj.res
+
+			res += "</li>"
 
 		if index+1 < items.length 
 			if items[index+1].lvl < lvl
@@ -24,6 +26,15 @@ genToc = (res, items, index, lvl) ->
 	res += "</ul>"
 	return {index: index, res: res}
 
+# use the same slugify as marked (rather than the one from markdown-toc) 
+# for consistency between toc and headers in content
+slugify = (str, opts) ->
+	str.toLowerCase()
+	   .replace(/(&lt;)|(&gt;)|\(|\)/g, '')
+	   .replace(/[^\w]+/g, '-')
+
+slugending = (str, seen, opts) ->
+	return str + '-' + (seen + 1);
 
 docpadConfig = {
 
@@ -70,9 +81,9 @@ docpadConfig = {
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
 		getToc: ->
-			debugger
-			mytoc = toc(@document.content).json
-			obj = genToc("", mytoc, 0, 2)
+			# debugger
+			mytoc = toc(@document.content, {slugify: slugify, slugending: slugending}).json
+			obj = genToc("", mytoc, 0, 2, 3)
 			obj.res
 
 	# =================================
@@ -91,6 +102,10 @@ docpadConfig = {
 	# Plugins
 
 	plugins:
+		markit:
+			plugins: [
+				'markdown-it-anchor'
+			]
 		downloader:
 			downloads: [
 			]
