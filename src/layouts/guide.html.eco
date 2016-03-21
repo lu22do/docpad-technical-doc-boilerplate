@@ -5,7 +5,7 @@ layout: default
 <div class="row" id="guide" data-spy="scroll" data-target="#spyscroll" data-offset="50">
 
     <div class="col-md-2">
-        <nav class="col-md-2 hidden-print affix" id="sidebar"> 
+        <nav class="hidden-print affix" id="sidebar"> 
             <ul class="nav nav-sidebar">
                 <% for document in @getCollection('guides').toJSON(): %>
                     <li
