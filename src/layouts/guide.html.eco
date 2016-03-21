@@ -2,35 +2,39 @@
 layout: default
 ---
 
-<div class="row" id="guide" data-spy="scroll" data-target="#spyscroll" data-offset="50">
+<div class="container-fluid">
 
-    <div class="col-md-2">
-        <nav class="hidden-print affix" id="sidebar"> 
-            <ul class="nav nav-sidebar">
-                <% for document in @getCollection('guides').toJSON(): %>
-                    <li
-                        about="<%= document.url %>"
-                        class="<%= 'active' if @document.url is document.url %>"
-                    >
-                        <a href="<%= document.url %>" property="dc:title">
-                            <%= document.title %>
-                        </a>
-                    </li>
-                <% end %>
-            </ul>
-        </nav>
-    </div>
+    <div class="row" id="guide" data-spy="scroll" data-target="#spyscroll" data-offset="50">
+
+        <div class="col-md-2">
+            <nav class="hidden-print affix" id="sidebar"> 
+                <ul class="nav nav-sidebar">
+                    <% for document in @getCollection('guides').toJSON(): %>
+                        <li
+                            about="<%= document.url %>"
+                            class="<%= 'active' if @document.url is document.url %>"
+                        >
+                            <a href="<%= document.url %>" property="dc:title">
+                                <%= document.title %>
+                            </a>
+                        </li>
+                    <% end %>
+                </ul>
+            </nav>
+        </div>
 
 
-    <div class="col-md-8">
-        <%- @content %>
-    </div>
+        <div class="col-md-8">
+            <%- @content %>
+        </div>
 
-    <div class="col-md-2">
-        <nav class="hidden-print hidden-xs hidden-sm affix" id="spyscroll"> 
-            <b class="toc-item">Contents</b>
-            <%- @getToc() %> 
-        </nav>
+        <div class="col-md-2">
+            <nav class="hidden-print hidden-xs hidden-sm affix" id="spyscroll"> 
+                <b class="toc-item">Contents</b>
+                <%- @getToc() %> 
+            </nav>
+        </div>
+
     </div>
 
 </div>

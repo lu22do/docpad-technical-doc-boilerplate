@@ -50,19 +50,16 @@
 	</div>
 
 	<!-- Content -->
-	<div class="container-fluid">
-		<!-- Content -->
-		<%- @content %>
+	<%- @content %>
 
-		<!-- Footer -->
-		<!--footer>
-			<hr>
-			<p class="pull-left">&copy; Nagra <%- (new Date()).getFullYear() %></p>
-			<p class="pull-right">
-				This website was last updated at <%= @site.date.toISOString() %>
-			</p>
-		</footer-->
-	</div><!-- /container -->
+	<!-- Footer -->
+	<!--footer>
+		<hr>
+		<p class="pull-left">&copy; Nagra <%- (new Date()).getFullYear() %></p>
+		<p class="pull-right">
+			This website was last updated at <%= @site.date.toISOString() %>
+		</p>
+	</footer-->
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
