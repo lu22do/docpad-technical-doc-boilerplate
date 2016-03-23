@@ -6,6 +6,9 @@ layout: default
 
     <div class="row" id="guide" data-spy="scroll" data-target="#spyscroll" data-offset="50">
 
+        <div class="col-md-1">
+        </div>
+
         <div class="col-md-2">
             <nav class="hidden-print affix" id="sidebar"> 
                 <ul class="nav nav-sidebar">
@@ -24,7 +27,7 @@ layout: default
         </div>
 
 
-        <div class="col-md-8">
+        <div class="col-md-6">
             <%- @content %>
         </div>
 
@@ -33,6 +36,9 @@ layout: default
                 <b class="toc-item">Contents</b>
                 <%- @getToc() %> 
             </nav>
+        </div>
+
+        <div class="col-md-1">
         </div>
 
     </div>
