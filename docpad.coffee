@@ -86,13 +86,20 @@ docpadConfig = {
 			obj = genToc("", mytoc, 0, 2, 3)
 			obj.res
 
+		hasTag: (tag) ->
+			if @document.tags
+				for _tag in @document.tags
+					if _tag == tag
+						return true
+			false
+
 	# =================================
 	# Collections
 	# These are special collections that our website makes available to us
 
 	collections:
-		pages: (database) ->
-			database.findAllLive({tags: $has:'toplevel'}, [pageOrder:1,title:1])
+		toplevelpages: (database) ->
+			database.findAllLive({topBarTitle: $exists: true}, [topbarOrder:1])
 
 		guides: (database) ->
 			database.findAllLive({tags: $has:'guide'}, [pageOrder:1])

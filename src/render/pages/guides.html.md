@@ -1,13 +1,16 @@
 ---
-title: Guides
+title: Introduction
 layout: guide
-tags: ['toplevel']
-pageOrder: 1
+tags: ['guide', 'toplevel']
+pageOrder: 0
+topBarTitle: Guides
+topbarOrder: 1
+topbarTag: guide
 ---
 
-# Application Developer Guides
+# Introduction
 
-Application development on this platform is super easy. 
+Application development on this platform is super easy.
 
 ## Where to start?
 
