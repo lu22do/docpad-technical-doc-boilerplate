@@ -8,7 +8,7 @@
     "docpad-plugin-markit": "~2.2.0",
     "docpad-plugin-stylus": "",
     "markdown-it-anchor": "^2.4.0",
-    "markdown-toc": "https://github.com/lu22do/markdown-toc.git"
+    "markdown-toc": "git+https://git@github.com/lu22do/markdown-toc.git"
   },
   "devDependencies": {
     "docpad-plugin-livereload": ""
