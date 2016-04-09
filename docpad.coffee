@@ -42,7 +42,7 @@ docpadConfig = {
 
 		site:
 			# The production url of our website
-			url: "http://website.com"
+			url: "http://localhost:9778"
 
 			# The default title of our website
 			title: "PoC Website"
@@ -103,7 +103,6 @@ docpadConfig = {
 
 		guides: (database) ->
 			database.findAllLive({tags: $has:'guide'}, [pageOrder:1])
-
 
 	# =================================
 	# Plugins

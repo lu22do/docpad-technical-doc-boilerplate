@@ -14,10 +14,10 @@ layout: default
                 <ul class="nav nav-sidebar">
                     <% for document in @getCollection('guides').toJSON(): %>
                         <li
-                            about="<%= document.url %>"
+                            about="<%= @getUrl(document.url) %>"
                             class="<%= 'active' if @document.url is document.url %>"
                         >
-                            <a href="<%= document.url %>" property="dc:title">
+                            <a href="<%= @getUrl(document.url) %>" property="dc:title">
                                 <%= document.title %>
                             </a>
                         </li>
