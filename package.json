@@ -2,16 +2,15 @@
   "name": "docpad-technical-doc-boilerplate",
   "version": "0.0.1",
   "dependencies": {
-    "docpad": "",
-    "docpad-plugin-coffeescript": "",
-    "docpad-plugin-eco": "",
-    "docpad-plugin-geturl": "^2.1.1",
-    "docpad-plugin-markit": "~2.2.0",
-    "docpad-plugin-stylus": "",
+    "docpad": "~6.78.4",
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-geturl": "~2.1.1",
+    "docpad-plugin-markit": "~2.3.0",
+    "docpad-plugin-stylus": "~2.11.0",
     "markdown-it-anchor": "^2.4.0",
     "markdown-toc": "git+https://git@github.com/lu22do/markdown-toc.git"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": ""
+    "docpad-plugin-livereload": "~2.7.1"
   }
 }
