@@ -5,8 +5,8 @@
     "docpad": "~6.78.4",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-geturl": "~2.1.1",
+    "docpad-plugin-less": "^2.4.1",
     "docpad-plugin-markit": "~2.3.0",
-    "docpad-plugin-stylus": "~2.11.0",
     "markdown-it-anchor": "^2.4.0",
     "markdown-toc": "git+https://git@github.com/lu22do/markdown-toc.git"
   },
