@@ -4,13 +4,10 @@ layout: default
 
 <div class="container-fluid">
 
-    <div class="row" id="guide" data-spy="scroll" data-target="#spyscroll" data-offset="50">
-
-        <div class="col-md-1">
-        </div>
+    <div class="row" id="content" data-spy="scroll">
 
         <div class="col-md-2">
-            <nav class="hidden-print affix" id="sidebar"> 
+            <nav class="hidden-print affix" id="sidebar">
                 <ul class="nav nav-sidebar">
                     <% for document in @getCollection('guides').toJSON(): %>
                         <li
@@ -27,18 +24,15 @@ layout: default
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-8">
             <%- @content %>
         </div>
 
         <div class="col-md-2">
-            <nav class="hidden-print hidden-xs hidden-sm affix" id="spyscroll"> 
+            <nav class="hidden-print hidden-xs hidden-sm affix" id="spyscroll">
                 <b class="toc-item">Contents</b>
-                <%- @getToc() %> 
+                <%- @getToc() %>
             </nav>
-        </div>
-
-        <div class="col-md-1">
         </div>
 
     </div>
