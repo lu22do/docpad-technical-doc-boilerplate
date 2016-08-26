@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Icons -->
-	<link rel="shortcut icon" href="images/icons/favicon.ico">
+	<link rel="shortcut icon" href="<%- @getUrl('/images/icons/favicon.ico') %>">
 
 	<!-- Styles -->
 	<%- @getBlock('styles').add(@getUrl(@site.styles)).toHTML() %>
@@ -30,7 +30,7 @@
 				</button>
 				<a class="navbar-brand" href="/">Doc portal PoC</a>
 			</div>
-			
+
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<% for document in @getCollection('toplevelpages').toJSON(): %>

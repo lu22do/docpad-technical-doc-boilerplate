@@ -5,29 +5,28 @@ tags: ['guide']
 pageOrder: 2
 ```
 
-OpenTV 5 HTML Advanced Developer’s Guide
-========================================
+# HTML Advanced Developer’s Guide
 
 ## Overview
 
 This document outlines various advanced programming techniques, which
-allow efficient and fast development of HTML applications using OpenTV
+allow efficient and fast development of HTML applications using XXXX
 WebKit.
 
 Also included are techniques allowing developers to achieve good
 application performance even on limited embedded devices such as set-top
 boxes.
 
-To get started, first refer to the *OpenTV 5 Application Developer’s
+To get started, first refer to the *XXXX Application Developer’s
 Guide*, which covers basic concepts such as how to access custom APIs
-for OpenTV5 functionality (CCOM), as well as general differences between
-OpenTV WebKit and common desktop browsers.
+for XXXX functionality (CCOM), as well as general differences between
+XXXX WebKit and common desktop browsers.
 
 ## Maximizing UI Performance
 
 ### General Best Practices
 
-OpenTV WebKit is broadly compatible with normal browser standards and
+XXXX WebKit is broadly compatible with normal browser standards and
 programming techniques. However, running on a device with limited
 resources means application developers must always keep in mind the more
 constrained set-top box environment.
@@ -602,17 +601,17 @@ Space-key.  Note that the timestamp is no longer included.  The prefix
 simply becomes the selected UTF-8 character string (whitespace
 included).
 
-### How to use OpenTV WebKit Web Inspector
+### How to use XXXX WebKit Web Inspector
 
-OpenTV 5.1.3 and OpenTV 5.1.4 use different Web Inspector backends.
+XXXX.1.3 and XXXX.1.4 use different Web Inspector backends.
 
-In OpenTV 5.1.3, the Web Inspector is similar to Chrome, with a few
-limitations.  In OpenTV 5.1.4, the Web Inspector is similar to Safari
-(refer to \[OpenTV 5.1.4\] How to use OpenTV WebKit Web Inspector for
+In XXXX.1.3, the Web Inspector is similar to Chrome, with a few
+limitations.  In XXXX.1.4, the Web Inspector is similar to Safari
+(refer to \[XXXX.1.4\] How to use XXXX WebKit Web Inspector for
 details).
 
-The OpenTV 5.1.3 WebKit may be built to enable the WebKit Remote
-Inspector. Once OpenTV WebKit is running on a target (at IP x.x.x.x),
+The XXXX.1.3 WebKit may be built to enable the WebKit Remote
+Inspector. Once XXXX WebKit is running on a target (at IP x.x.x.x),
 point your desktop browser to x.x.x.x:2999 and wait for it to load.
 
 Element attributes may be edited within the inspector view and the
@@ -622,13 +621,13 @@ As the mouse hovers over elements in the inspector view, they are
 highlighted on the target display. Some additional attributes are also
 displayed.
 
-Note that the inspector-enabled build of OpenTV 5.1.3 WebKit requires
+Note that the inspector-enabled build of XXXX.1.3 WebKit requires
 more memory for both the static image size (+10%) and <span
 style="font-size:10.5pt;line-height:150%;color:#333333;background:white">run-time
 memory (+10-20%)</span>.  The increase in run-time memory mostly occurs
 when the inspector is open and active.
 
-Major differences between OpenTV 5.1.3 Webkit and Chrome include:
+Major differences between XXXX.1.3 Webkit and Chrome include:
 
 <span style="font-family:Symbol">·<span
 style="font:7.0pt &quot;Times New Roman&quot;">        
@@ -659,25 +658,25 @@ style="font:7.0pt &quot;Times New Roman&quot;">        
 </span></span>**Settings**\
 Supports limited setting options
 
-### How to use OpenTV WebKit Web Inspector
+### How to use XXXX WebKit Web Inspector
 
-OpenTV 5.1.3 and OpenTV 5.1.4 use different Web Inspector backends. In
-OpenTV 5.1.3, the Web Inspector is similar to Chrome, with a few
-limitations (refer to \[OpenTV 5.1.3\] How to use OpenTV WebKit Web
+XXXX.1.3 and XXXX.1.4 use different Web Inspector backends. In
+XXXX.1.3, the Web Inspector is similar to Chrome, with a few
+limitations (refer to \[XXXX.1.3\] How to use XXXX WebKit Web
 Inspector for details).
 
-In OpenTV 5.1.4, the Web Inspector is similar to Safari, with a few
+In XXXX.1.4, the Web Inspector is similar to Safari, with a few
 minor limitations. For details about Safari’s implementation, refer to
 the [Safari Web Inspector User
 Guide](https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html). 
 
-<span style="font-size:11.0pt">Major differences between </span>OpenTV
+<span style="font-size:11.0pt">Major differences between </span>XXXX
 5.1.4’s WebKit <span style="font-size:11.0pt">and Safari include:
 </span>
 
 <span style="font-size:11.0pt;font-family:Symbol">·<span
 style="font:7.0pt &quot;Times New Roman&quot;">        
-</span></span><span style="font-size:11.0pt">OpenTV’s WebKit adds a
+</span></span><span style="font-size:11.0pt">XXXX’s WebKit adds a
 “Profiles” button on the tool bar, which launches the profile side bar
 and view.</span>
 
@@ -689,26 +688,26 @@ style="font:7.0pt &quot;Times New Roman&quot;">        
 style="font-size:11.0pt;font-family:&quot;Courier New&quot;">o<span
 style="font:7.0pt &quot;Times New Roman&quot;">   </span></span><span
 style="font-size:11.0pt">Using Safari, the Timeline panel and Profiles
-side bar panel are accessed using the same view, but OpenTV WebKit
+side bar panel are accessed using the same view, but XXXX WebKit
 separates them into two views.  The Profiles side bar is launched by
 using the “Profiles” button on the toolbar.</span>
 
 <span
 style="font-size:11.0pt;font-family:&quot;Courier New&quot;">o<span
 style="font:7.0pt &quot;Times New Roman&quot;">   </span></span><span
-style="font-size:11.0pt">OpenTV WebKit does not support the CSS Selector
+style="font-size:11.0pt">XXXX WebKit does not support the CSS Selector
 Profiling feature </span>
 
 <span style="font-size:11.0pt;font-family:Symbol">·<span
 style="font:7.0pt &quot;Times New Roman&quot;">        
 </span></span><span style="font-size:11.0pt">The Safari Keyboard
-Shortcuts don’t apply to OpenTV WebKit. Refer to the </span>OpenTV
+Shortcuts don’t apply to XXXX WebKit. Refer to the </span>XXXX
 WebKit Keyboard Shortcuts <span style="font-size:11.0pt">section for
 details.</span>
 
-#### Launching the OpenTV WebKit Web Inspector
+#### Launching the XXXX WebKit Web Inspector
 
-Once the OpenTV 5.1.4 WebKit is running on a target (at IP x.x.x.x),
+Once the XXXX.1.4 WebKit is running on a target (at IP x.x.x.x),
 point your desktop browser to x.x.x.x:2999 and wait for it to load.
 
 Element attributes may be edited within the inspector view and the
@@ -718,16 +717,16 @@ As the mouse hovers over elements in the inspector view, they are
 highlighted on the target display. Some additional attributes are also
 displayed.
 
-Note that the inspector enabled build of OpenTV WebKit requires more
+Note that the inspector enabled build of XXXX WebKit requires more
 memory for both the static image size (+10%) and run-time memory
 (10-20%).  The increase in run-time memory mostly occurs when the
 inspector is open and active.
 
  
 
-#### OpenTV WebKit Keyboard Shortcuts
+#### XXXX WebKit Keyboard Shortcuts
 
-The OpenTV 5.1.4 WebKit keyboard shortcuts follow; note differences
+The XXXX.1.4 WebKit keyboard shortcuts follow; note differences
 between the two implementations.
 
 **Navigation** keyboard shortcuts:
@@ -737,7 +736,7 @@ between the two implementations.
 | style="font-size:10.0pt; | style="font-size:10.0pt; | style="font-size:10.0pt; |
 | font-family:&quot;Arial& | font-family:&quot;Arial& | font-family:&quot;Arial& |
 | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q |
-| uot;">Action</span>**    | uot;">Safari             | uot;">OpenTV             |
+| uot;">Action</span>**    | uot;">Safari             | uot;">XXXX             |
 |                          | Keyboard                 | WebKit Keyboard          |
 |                          | shortcut</span>**        | shortcut</span>**        |
 +--------------------------+--------------------------+--------------------------+
@@ -857,7 +856,7 @@ between the two implementations.
 | style="font-size:10.0pt; | style="font-size:10.0pt; | style="font-size:10.0pt; |
 | font-family:&quot;Arial& | font-family:&quot;Arial& | font-family:&quot;Arial& |
 | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q |
-| uot;">Action</span>**    | uot;">Safari             | uot;">OpenTV             |
+| uot;">Action</span>**    | uot;">Safari             | uot;">XXXX             |
 |                          | Keyboard                 | WebKit Keyboard          |
 |                          | shortcut</span>**        | shortcut</span>**        |
 +--------------------------+--------------------------+--------------------------+
@@ -879,7 +878,7 @@ between the two implementations.
 | style="font-size:10.0pt; | style="font-size:10.0pt; | style="font-size:10.0pt; |
 | font-family:&quot;Arial& | font-family:&quot;Arial& | font-family:&quot;Arial& |
 | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q |
-| uot;">Action</span>**    | uot;">Safari             | uot;">OpenTV             |
+| uot;">Action</span>**    | uot;">Safari             | uot;">XXXX             |
 |                          | Keyboard                 | WebKit Keyboard          |
 |                          | shortcut</span>**        | shortcut</span>**        |
 +--------------------------+--------------------------+--------------------------+
@@ -944,7 +943,7 @@ style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Ac
 Safari Keyboard shortcut</span>**
 
 **<span
-style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">OpenTV
+style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">XXXX
 WebKit Keyboard shortcut</span>**
 
 <span
@@ -1020,7 +1019,7 @@ or Control-Shift-;</span>
 | style="font-size:10.0pt; | style="font-size:10.0pt; | style="font-size:10.0pt; |
 | font-family:&quot;Arial& | font-family:&quot;Arial& | font-family:&quot;Arial& |
 | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q | quot;,&quot;sans-serif&q |
-| uot;">Action</span>**    | uot;">Keyboard           | uot;">OpenTV             |
+| uot;">Action</span>**    | uot;">Keyboard           | uot;">XXXX             |
 |                          | shortcut</span>**        | WebKit Keyboard shortcut |
 |                          |                          | </span>**                |
 +--------------------------+--------------------------+--------------------------+
@@ -1227,7 +1226,7 @@ option by using a keystroke. Strike the key at the beginning and again
 at the end of an animation. The frames-per-second achieved over that
 period are logged to the console.
 
-OpenTV Webkit also provides a (non-standard) addition to the Javascript
+XXXX Webkit also provides a (non-standard) addition to the Javascript
 performance interface, *webkitFrameCount*.
 
 The *performance.webkitFrameCount* value returns the number of frames
@@ -1269,21 +1268,17 @@ but low FPS may be an indicator of bottlenecks in the application.
 The standard UNIX ‘<span style="font-size:10.0pt;line-height:
 150%;font-family:&quot;Courier New&quot;">top</span>’ command is
 available. This lists processes consuming the most memory and CPU power.
-It may show when another process is starving the OpenTV WebKit process.
+It may show when another process is starving the XXXX WebKit process.
 
 ## Video
 
 The <span style="font-size:10.0pt;line-height:150%;
 font-family:&quot;Courier New&quot;">&lt;video&gt;</span> tag is
 primarily used with the CCOM Player object, which provides the full
-OpenTV5 feature set. Using the <span class="Code0"><span lang="X-NONE"
+XXXX feature set. Using the <span class="Code0"><span lang="X-NONE"
 style="font-size:10.0pt;line-height:150%">&lt;video&gt;</span></span>
 tag in the standard W3C manner (without CCOM) is primarily for streaming
 internet video. The CCOM Player object allows many more advanced
 features, such as altering the aspect ratio of video while scaling.
 
 ### 4.1.<span style="font:7.0pt &quot;Times New Roman&quot;">     </span> []()[Sizing Guidelines]()
-
-
-
-

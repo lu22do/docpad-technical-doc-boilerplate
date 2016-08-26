@@ -1,6 +1,7 @@
 {
   "name": "docpad-technical-doc-boilerplate",
   "version": "0.0.1",
+  "private": "true",
   "dependencies": {
     "docpad": "~6.78.4",
     "docpad-plugin-eco": "~2.1.0",

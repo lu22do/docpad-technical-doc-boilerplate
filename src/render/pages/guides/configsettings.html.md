@@ -5,13 +5,13 @@ tags: ['guide']
 pageOrder: 3
 ```
 
-# OpenTV 5 Application Developer’s Guide
+# Application Developer’s Guide
 
 ## Overview
 
 ### Audience
 
-This document is intended for developers using OpenTV5 to create HTML
+This document is intended for developers using XXXX to create HTML
 applications. The reader is expected to be familiar with the JavaScript
 programming language, HTML, CSS, and general object-oriented software
 programming principles.
@@ -20,24 +20,24 @@ programming principles.
 
 This documentation covers:
 
-* Unique features of OpenTV5, and
+* Unique features of XXXX, and
 * Deviations from standard HTML/JavaScript norms.
 
 For general, non-specific information about HTML/JavaScript usage, refer
 to one of many web resources, such as [*http://www.w3schools.com/*](http://www.w3schools.com/), for tutorials and specifications.
 
-The *OpenTV 5 HTML Advanced Developer’s Guide* is also included in this
+The *XXXX 5 HTML Advanced Developer’s Guide* is also included in this
 documentation set: refer to it for detailed advice about how to build
-efficient applications using OpenTV WebKit, particularly techniques to
+efficient applications using XXXX WebKit, particularly techniques to
 maximize performance on a hardware-limited embedded device such as a
 set-top box.
 
-OpenTV WebKit
+XXXX WebKit
 -----
 
-The main application development environment supported by OpenTV 5 is
-OpenTV WebKit, a native WebKit­based browser and runtime environment.
-OpenTV 5.1.4 has been updated to use OpenTV WebKit version 1.1.
+The main application development environment supported by XXXX 5 is
+XXXX WebKit, a native WebKit­based browser and runtime environment.
+XXXX 5.1.4 has been updated to use XXXX WebKit version 1.1.
 
 The Ekioh browser previously provided for SVG-based development is now
 deprecated, and described in [<span class="zlink">Appendix: Ekioh
@@ -60,10 +60,10 @@ Standard features:
 • Media Source Extensions (MSE)
 • Encrypted Media Extensions (EME)
 
-OpenTV 5-specific features:
+XXXX 5-specific features:
 
-• A JavaScript API (CCOM):  Allows applications to access the Middleware features of OpenTV5.
-• Alerts: When using OpenTV WebKit, use <span class="Code">console.log</span>
+• A JavaScript API (CCOM):  Allows applications to access the Middleware features of XXXX.
+• Alerts: When using XXXX WebKit, use <span class="Code">console.log</span>
 instead of <span class="Code">alert</span> to output data to the console
 log.
 • Remote Controller keys
@@ -74,7 +74,7 @@ A protocol for simple data broadcasting and broadcast files systems.
 
 ### Running
 
-To run an application on OpenTV WebKit:
+To run an application on XXXX WebKit:
 
 • Prepare the html application package, edit the <span
 class="Variable">*OTVAppMetadata.xml*</span> file, and set the <span
@@ -88,13 +88,13 @@ section for details).
 
 ### Logging
 
-OpenTV WebKit uses the OpenTV 5 <span class="Code">log</span> function
+XXXX WebKit uses the XXXX 5 <span class="Code">log</span> function
 to save internal (and other types) of logs coming from various types of
 JavaScript messages, including <span class="Code">alert</span>, <span
 class="Code">console.log</span>, <span class="Code">confirm</span> and
 <span class="Code">prompt</span>.
 
-The OpenTV WebKit log format is:
+The XXXX WebKit log format is:
 
 STATUS : \[OtvWebKit\] \[XXXX\] code location : message
 
@@ -111,7 +111,7 @@ Where:
 </span>An optional JavaScript code location information, including the
 file name and line number. This information is disabled by default, and
 outputs only in verbose log mode. Refer to the <span
-class="Title">*OpenTV 5 HTML Advanced Developer’s Guide*</span> for
+class="Title">*XXXX 5 HTML Advanced Developer’s Guide*</span> for
 details about how to modify the <span
 class="Variable">*otvwebkit-config.xml*</span> file to enable the <span
 class="Code">&lt;js-log-verbose&gt;</span> setting.
@@ -133,7 +133,7 @@ values.
 of the key mapping table.
 
 4\. HTML applications receive the numerical key values indicated by the
-“OpenTV WebKit Key Codes” columns.
+“XXXX WebKit Key Codes” columns.
 
 Commonly used remote control key codes:
 

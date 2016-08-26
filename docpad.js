@@ -1,4 +1,4 @@
-var docpadConfig, genToc, slugending, slugify, toc;
+var docpadConfig, genToc, slugify, toc;
 
 toc = require('markdown-toc');
 
@@ -34,13 +34,18 @@ genToc = function(res, items, index, lvl, maxlvl) {
   };
 };
 
-slugify = function(str, opts) {
-  return str.toLowerCase().replace(/(&lt;)|(&gt;)|\(|\)/g, '').replace(/[^\w]+/g, '-');
+slugify = function(str, opts, token) {
+  str = str.toLowerCase().replace(/(&lt;)|(&gt;)/g, '').replace(/[^\w\s-]/g, '').replace(/[^\w]+/g, '-');
+
+  if (token && typeof token === 'object' && token.seen) {
+    if (token.seen > 0) {
+      str += '-' + (token.seen + 1);
+    }
+  }
+
+  return str;
 };
 
-slugending = function(str, seen, opts) {
-  return str + '-' + (seen + 1);
-};
 
 docpadConfig = {
 
@@ -48,22 +53,22 @@ docpadConfig = {
 
     site: {
       url: "http://localhost:9778",
-      
+
       title: "PoC Website",
-      
+
       styles: [
-        "/vendor/bootstrap/css/bootstrap.css", 
-        "/vendor/bootstrap/css/bootstrap-theme.css", 
+        "/vendor/bootstrap/css/bootstrap.css",
+        "/vendor/bootstrap/css/bootstrap-theme.css",
         "/styles/style.css"
       ],
-      
+
       scripts: [
-        "/vendor/jquery.js", 
-        "/vendor/bootstrap/js/bootstrap.js", 
+        "/vendor/jquery.js",
+        "/vendor/bootstrap/js/bootstrap.js",
         "/scripts/script.js"
       ]
     },
-    
+
     getPreparedTitle: function() {
       if (this.document.title) {
         return this.document.title + " | " + this.site.title;
@@ -71,25 +76,24 @@ docpadConfig = {
         return this.site.title;
       }
     },
-    
+
     getPreparedDescription: function() {
       return this.document.description || this.site.description;
     },
-    
+
     getPreparedKeywords: function() {
       return this.site.keywords.concat(this.document.keywords || []).join(', ');
     },
-    
+
     getToc: function() {
       var mytoc, obj;
       mytoc = toc(this.document.content, {
         slugify: slugify,
-        slugending: slugending
       }).json;
       obj = genToc("", mytoc, 0, 2, 3);
       return obj.res;
     },
-    
+
     hasTag: function(tag) {
       var _tag, i, len, ref;
       if (this.document.tags) {
@@ -133,9 +137,17 @@ docpadConfig = {
 
   plugins: {
     markit: {
-      plugins: ['markdown-it-anchor']
+      plugins: ['markdown-it-anchor'],
+      html: true,
+      linkify: true,
+      markdown_it_anchor: {
+        permalink: true,
+        permalinkClass: 'glyphicon glyphicon-link permalink',
+        permalinkSymbol: '',
+        permalinkBefore: false
+      }
     },
-    
+
     downloader: {
       downloads: []
     }
